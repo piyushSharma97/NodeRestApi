@@ -1,9 +1,10 @@
 var createError = require('http-errors');
 var express = require('express');
+
 var path = require('path');
 require('./db/connection')
 
-
+require('dotenv').config()
 //'mongodb+srv://piyush5sarvika:sarvika5456@cluster0.4yvdu.mongodb.net/employee_crud?retryWrites=true&w=majority'
 var indexRouter = require('./routes/index');
 var employeeRouter = require('./routes/EmployeeRoute')

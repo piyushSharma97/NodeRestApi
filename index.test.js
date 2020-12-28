@@ -46,12 +46,21 @@ test +=1
 //       });
 //     });
 //   });
-describe('#find()', function() {
-    it('responds with matching records', async function() {
+describe('#find employee', function() {
+    it('responds with matching records of employees', async function() {
       const employees = await employeeSchema.find();
 
       const employeeCount = await employeeSchema.countDocuments()
       assert.equal(employees.length,employeeCount)
+    });
+  });
+
+  describe('#find department', function() {
+    it('responds with matching records of departments', async function() {
+      const department = await departmentSchema.find();
+
+      const departmentcount = await departmentSchema.countDocuments()
+      assert.equal(department.length,departmentcount)
     });
   });
 
