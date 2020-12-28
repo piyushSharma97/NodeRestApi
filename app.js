@@ -42,4 +42,4 @@ app.listen(port,()=>{
 })
 
 
-//	$productitem.product.compCode
+module.exports = app
